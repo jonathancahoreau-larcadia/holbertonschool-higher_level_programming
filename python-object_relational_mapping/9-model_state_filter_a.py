@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""Fetch and print the first State object from a MySQL database.
+"""Fetch and print states with names containing the letter A from MySQL.
 
-This script connects to a MySQL database using SQLAlchemy and retrieves
-the first row from the `states` table ordered by `id`. It prints the
-result as `id: name`, or `Nothing` if no rows exist.
+This script connects to a MySQL database using SQLAlchemy and queries
+for all State objects whose name contains the letter "A" or "a".
+Matching rows are printed as `id: name`, ordered by state id.
 """
 
 import sys
@@ -25,12 +25,13 @@ if __name__ == "__main__":
     )
 
     Base.metadata.create_all(engine)
+
     session = Session(engine)
 
-    result = session.query(State).order_by(State.id).first()
-    if result is None:
-        print("Nothing")
-    else:
-        print("{}: {}".format(result.id, result.name))
+    result_a = session.query(State).filter(
+        State.name.like("%a%")).order_by(State.id).all()
+
+    for state in result_a:
+        print("{}: {}".format(state.id, state.name))
 
     session.close()
