@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 
 from sqlalchemy import Integer, String, Column
 from model_state import Base, State
@@ -10,7 +10,7 @@ class City(Base):
     name = Column(String(128), nullable=False)
     state_id = Column(Integer, nullable=False)
 
-    
+
 
 
 
