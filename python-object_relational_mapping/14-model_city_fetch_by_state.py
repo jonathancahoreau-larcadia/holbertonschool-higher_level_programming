@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """Fetch cities by state from a MySQL database using SQLAlchemy.
 
 This script connects to a MySQL database using credentials provided on the
