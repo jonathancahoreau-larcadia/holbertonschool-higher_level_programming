@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """Fetch and print all State objects from a MySQL database.
 
 This script connects to a MySQL database using SQLAlchemy and prints all
