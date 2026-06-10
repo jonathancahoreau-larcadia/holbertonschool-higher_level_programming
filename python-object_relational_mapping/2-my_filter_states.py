@@ -33,7 +33,7 @@ def main():
         "SELECT * FROM states "
         "WHERE name = '{}' "
         "ORDER BY states.id ASC".format(name)
-        )
+    )
     query_rows = cur.fetchall()
     for row in query_rows:
         print(row)
