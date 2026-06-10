@@ -1,11 +1,15 @@
 #!/usr/bin/python3
+"""Defines the City class mapped to the cities table."""
 
-from sqlalchemy import Integer, String, Column, ForeignKey
+from sqlalchemy import Column, ForeignKey, Integer, String
 from model_state import Base
 
 
 class City(Base):
-    __tablename__ = 'cities'
+    """Represents a city stored in the cities table."""
+
+    __tablename__ = "cities"
+
     id = Column(Integer, primary_key=True, nullable=False)
     name = Column(String(128), nullable=False)
     state_id = Column(Integer, ForeignKey("states.id"), nullable=False)
