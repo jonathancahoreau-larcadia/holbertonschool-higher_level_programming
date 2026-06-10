@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 
 """Simple HTTP server example using Python's built-in http.server.
 
