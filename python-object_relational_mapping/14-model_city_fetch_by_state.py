@@ -9,7 +9,7 @@ city information grouped by state.
 import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import Session
-from model_state import Base, State
+from model_state import State
 from model_city import City
 
 
@@ -30,7 +30,7 @@ if __name__ == "__main__":
         .format(username, password, database),
         pool_pre_ping=True
     )
-    Base.metadata.create_all(engine)
+
     session = Session(engine)
 
     city_join = session.query(State, City).join(
