@@ -11,7 +11,8 @@ import MySQLdb
 
 
 def main():
-    """Connect to the database, query cities joined with states, and print results.
+    """Connect to the database, query cities joined with states,
+    and print results.
 
     Expects three command line arguments in the following order:
     username, password, database name.
