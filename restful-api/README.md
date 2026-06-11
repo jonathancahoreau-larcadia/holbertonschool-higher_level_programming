@@ -126,3 +126,20 @@ If you want to use the script from another module, import the functions:
     from task_02_requests import fetch_and_print_posts, fetch_and_save_posts
 
 Then call the functions directly.
+
+HTTP server example
+-------------------
+
+The repository also includes a simple HTTP server example in `task_03_http_server.py`.
+Run it with:
+
+    python3 task_03_http_server.py
+
+Then access the endpoints on `http://localhost:8000`:
+
+- `/`       : returns a plain text greeting
+- `/data`   : returns sample JSON data
+- `/status` : returns a plain text health status
+- `/info`   : returns JSON metadata about the server
+
+This script demonstrates how to build a basic API with Python's standard library.
