@@ -11,18 +11,18 @@ You are not allowed to use var
 */
 
 const nombreArgument = process.argv.length;
-const list_arg = [];
+const listArg = [];
 
 if (nombreArgument < 4) {
   console.log(0);
 } else {
   for (let i = 2; i < nombreArgument; i++) {
-    list_arg.push(parseInt(process.argv[i]));
+    listArg.push(parseInt(process.argv[i]));
   }
-  const maxi = Math.max(...list_arg);
-  const indexMax = list_arg.indexOf(maxi);
-  list_arg.splice(indexMax, 1);
-  const secondBiggest = Math.max(...list_arg);
+  const maxi = Math.max(...listArg);
+  const indexMax = listArg.indexOf(maxi);
+  listArg.splice(indexMax, 1);
+  const secondBiggest = Math.max(...listArg);
 
   console.log(secondBiggest);
 }
